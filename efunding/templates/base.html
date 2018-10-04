@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'efunding/style.css' %}" type="text/css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'efunding/js.js' %}"></script>
+        {% block head%}
+        <title>Base</title>
+        {% endblock%}
+
+    </head>
+    <body>
+        <div id="main" style="display:block;">
+        {% block navbar %}
+        {% include 'navbar.html' %}
+        {% endblock %}
+
+        {% block jumbotron %}
+        {% endblock %}
+
+        {% block body%}
+        {% endblock%}
+        
+        {% include 'java_script.html'%}
+        </div>
+    </body>
+</html>

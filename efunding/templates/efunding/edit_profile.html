@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block head%}
+<title>Profile</title>
+{% endblock%}
+
+{% block body%}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <p><a class="btn btn-primary" href="/profile/change-password/" role="button">Ganti Password</a></p>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>
+{% endblock%}

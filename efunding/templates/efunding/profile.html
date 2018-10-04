@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block head%}
+<title>Profile</title>
+{% endblock%}
+
+{% block navbar %}
+{% include 'navbar_profile.html' %}
+{% endblock %}
+
+{% block body%}
+<div class="container">
+    <h1>Profile</h1>
+   <p>{{user}}</p>
+   <p>{{user.first_name}}</p>
+   <p>{{user.last_name}}</p>
+   <p>{{user.email}}</p>
+   <p><a class="btn btn-primary" href="/profile/edit" role="button">Edit</a></p>
+   <p><a class="btn btn-primary" href="/logout/" role="button">Keluar</a></p>
+</div>
+{% endblock%}
